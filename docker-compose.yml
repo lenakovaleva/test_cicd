@@ -1,4 +1,4 @@
-version: "3.7"
+# version: "3.7"
 
 services:
   api-tests:
@@ -10,8 +10,8 @@ services:
       - ./:/usr/workspace
     command: /bin/sh -c "pytest -sv --alluredir=allure-results"
     working_dir: /usr/workspace
-    environment:
-      API_TOKEN: ${API_TOKEN}
+    # environment:
+    #   API_TOKEN: ${API_TOKEN}
 
   report:
     image: api-tests:v1
