@@ -9,14 +9,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-    #   - name: Checkout (copy) gh-pages repository to GitHub runner
-    #     uses: actions/checkout@v2
-    #     with:
-    #       ref: gh-pages
-    #       path: ./.github/gh-pages
-
-      - name: Set up Docker Compose
-        uses: docker/compose-action@v1
+      - name: Checkout (copy) gh-pages repository to GitHub runner
+        uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+          path: ./.github/gh-pages
 
       - name: Run UI-tests via docker-compose
         run: |
